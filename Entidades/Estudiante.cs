@@ -22,6 +22,7 @@ namespace RegistroEstudiante.Entidades
 
         public Estudiante()
         {
+
         }
 
         public Estudiante(int estudianteid, string matricula, string nombres, string apellidos, string cedula, string telefono, string celular, string email, DateTime fechaNacimiento, int sexo, decimal balance)

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using RegistroEstudiante.DAL;
 using RegistroEstudiante.Entidades;
 using System.Data.Entity;
-
+using RegistroEstudiante.UI.Registros;
 
 namespace RegistroEstudiante.BLL
 {
@@ -35,6 +35,30 @@ namespace RegistroEstudiante.BLL
             }
 
             return paso;
+        }
+
+        public static void GuardarBalance(int id, decimal balance)
+        {
+            Contexto db = new Contexto();
+            Estudiante estudiante = new Estudiante();
+
+            estudiante = db.Estudiante.Find(id);
+
+            try
+            {
+                estudiante.Balance += balance;
+
+            db.Entry(estudiante).State = EntityState.Modified;
+            db.SaveChanges();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                db.Dispose();
+            }
         }
 
         public static bool Modificar(Estudiante estudiante)
@@ -91,11 +115,14 @@ namespace RegistroEstudiante.BLL
             Contexto db = new Contexto();
 
             Estudiante estudiante = new Estudiante();
+            Inscripcion inscripcion = new Inscripcion();
 
             try
             {
                 estudiante = db.Estudiante.Find(id);
+
             }
+
             catch(Exception)
             {
                 throw;

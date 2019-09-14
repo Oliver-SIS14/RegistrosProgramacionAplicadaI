@@ -19,17 +19,39 @@ namespace RegistroEstudiante
             InitializeComponent();
         }
 
+        private void InscripcionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formulario3 = new rInscripciones();
+            formulario3.MdiParent = this;
+            formulario3.Show();
+        }
 
-        private void RegistroToolStripMenuItem_Click(object sender, EventArgs e)
+        private void EstudiantesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form formulario = new RegistroEstudiantes();
+            formulario.MdiParent = this;
             formulario.Show();
         }
 
-        private void ConsultaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void InscripcionesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form formulario3 = new rInscripciones();
+            formulario3.MdiParent = this;
+            formulario3.Show();
+        }
+
+        private void EstudiantesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Form formulario2 = new ConsultaEstudiante();
+            formulario2.MdiParent = this;
             formulario2.Show();
+        }
+
+        private void InscripcionesToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Form formulario3 = new ConsultaInscripciones();
+            formulario3.MdiParent = this;
+            formulario3.Show();
         }
     }
 }

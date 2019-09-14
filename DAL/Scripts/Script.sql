@@ -16,5 +16,19 @@ CREATE TABLE Estudiante
 	Email varchar(30),
 	FechaNacimiento date,
 	Sexo int,
-	Balance decimal
+	Balance float
 );
+
+go
+
+CREATE TABLE Inscripcion(
+
+	Inscripsionid int primary key identity(1,1),
+	Fecha date,
+	Estudianteid int,
+	Comentarios varchar(max),
+	Monto decimal(9,2),
+	Balance decimal(9,2),
+	Deposito decimal(9,2),
+	constraint fEstudianteid foreign key(Estudianteid) references Estudiante (Estudianteid),
+)

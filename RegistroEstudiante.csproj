@@ -54,8 +54,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\EstudianteBLL.cs" />
+    <Compile Include="BLL\InscripcionBLL.cs" />
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entidades\Estudiante.cs" />
+    <Compile Include="Entidades\Inscripcion.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,11 +72,23 @@
     <Compile Include="UI\Consultas\ConsultaEstudiante.Designer.cs">
       <DependentUpon>ConsultaEstudiante.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Consultas\ConsultaInscripciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\ConsultaInscripciones.Designer.cs">
+      <DependentUpon>ConsultaInscripciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\RegistroEstudiantes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Registros\RegistroEstudiantes.Designer.cs">
       <DependentUpon>RegistroEstudiantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\rInscripciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rInscripciones.Designer.cs">
+      <DependentUpon>rInscripciones.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -92,8 +106,14 @@
     <EmbeddedResource Include="UI\Consultas\ConsultaEstudiante.resx">
       <DependentUpon>ConsultaEstudiante.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\ConsultaInscripciones.resx">
+      <DependentUpon>ConsultaInscripciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\RegistroEstudiantes.resx">
       <DependentUpon>RegistroEstudiantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rInscripciones.resx">
+      <DependentUpon>rInscripciones.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -120,7 +140,11 @@
     <None Include="Resources\cancelarn.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DAL\Scripts\Script.sql" />
+    <None Include="Resources\GuardarIcon %281%291.png" />
+    <None Include="Resources\cancelarn1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DAL\Scripts\script.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

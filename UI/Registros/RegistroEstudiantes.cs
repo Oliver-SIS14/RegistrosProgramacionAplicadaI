@@ -1,4 +1,5 @@
 ﻿using RegistroEstudiante.BLL;
+using RegistroEstudiante.DAL;
 using RegistroEstudiante.Entidades;
 using System;
 using System.Collections.Generic;
@@ -42,21 +43,20 @@ namespace RegistroEstudiante.UI.Registros
 
         private Estudiante LlenaClase()
         {
-            Estudiante estudiante = new Estudiante
-            {
-                Estudianteid = Convert.ToInt32(IDNumericUpDown.Value),
-                Nombres = NombresTextBox.Text,
-                Apellidos = ApellidosTextBox.Text,
-                Cedula = CedulaMasketTextBox.Text,
-                Telefono = TelefonoMaskedTextBox.Text,
-                Matricula = MatriculaMaskedTextBox.Text,
-                Celular = CelularMaskedTextBox.Text,
-                Balance = Convert.ToDecimal(BalanceMaskedTextBox.Text),
-                Sexo = SexoComboBox.SelectedIndex,
-                Email = EmailTextBox.Text,
-                FechaNacimiento = NacimientoDateTimePicker.Value
-            };
+            Estudiante estudiante = new Estudiante();
 
+            estudiante.Estudianteid = Convert.ToInt32(IDNumericUpDown.Value);
+            estudiante.Nombres = NombresTextBox.Text;
+            estudiante.Apellidos = ApellidosTextBox.Text;
+            estudiante.Cedula = CedulaMasketTextBox.Text;
+            estudiante.Telefono = TelefonoMaskedTextBox.Text;
+            estudiante.Matricula = MatriculaMaskedTextBox.Text;
+            estudiante.Celular = CelularMaskedTextBox.Text;
+         //   estudiante.Balance = Convert.ToDecimal(BalanceMaskedTextBox.Text);
+            estudiante.Sexo = SexoComboBox.SelectedIndex;
+            estudiante.Email = EmailTextBox.Text;
+            estudiante.FechaNacimiento = NacimientoDateTimePicker.Value;
+            
             return estudiante;
         }
         private void LlenaCampo(Estudiante estudiante)

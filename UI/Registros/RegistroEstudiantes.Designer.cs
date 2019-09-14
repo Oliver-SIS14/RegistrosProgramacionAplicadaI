@@ -46,16 +46,16 @@
             this.ApellidosTextBox = new System.Windows.Forms.TextBox();
             this.EmailTextBox = new System.Windows.Forms.TextBox();
             this.SexoComboBox = new System.Windows.Forms.ComboBox();
-            this.EliminarButton = new System.Windows.Forms.Button();
-            this.GuardarButton = new System.Windows.Forms.Button();
-            this.NuevoButton = new System.Windows.Forms.Button();
-            this.BuscarButton = new System.Windows.Forms.Button();
             this.MatriculaMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.CedulaMasketTextBox = new System.Windows.Forms.MaskedTextBox();
             this.TelefonoMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.CelularMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.BalanceMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.EliminarButton = new System.Windows.Forms.Button();
+            this.GuardarButton = new System.Windows.Forms.Button();
+            this.NuevoButton = new System.Windows.Forms.Button();
+            this.BuscarButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.IDNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
@@ -170,6 +170,7 @@
             // 
             this.IDNumericUpDown.Location = new System.Drawing.Point(137, 44);
             this.IDNumericUpDown.Name = "IDNumericUpDown";
+            this.IDNumericUpDown.ReadOnly = true;
             this.IDNumericUpDown.Size = new System.Drawing.Size(227, 20);
             this.IDNumericUpDown.TabIndex = 12;
             // 
@@ -204,6 +205,50 @@
             this.SexoComboBox.Name = "SexoComboBox";
             this.SexoComboBox.Size = new System.Drawing.Size(364, 21);
             this.SexoComboBox.TabIndex = 21;
+            // 
+            // MatriculaMaskedTextBox
+            // 
+            this.MatriculaMaskedTextBox.Location = new System.Drawing.Point(137, 146);
+            this.MatriculaMaskedTextBox.Mask = "0000-0000";
+            this.MatriculaMaskedTextBox.Name = "MatriculaMaskedTextBox";
+            this.MatriculaMaskedTextBox.Size = new System.Drawing.Size(363, 20);
+            this.MatriculaMaskedTextBox.TabIndex = 26;
+            // 
+            // CedulaMasketTextBox
+            // 
+            this.CedulaMasketTextBox.Location = new System.Drawing.Point(137, 172);
+            this.CedulaMasketTextBox.Mask = "000-0000000-0";
+            this.CedulaMasketTextBox.Name = "CedulaMasketTextBox";
+            this.CedulaMasketTextBox.Size = new System.Drawing.Size(363, 20);
+            this.CedulaMasketTextBox.TabIndex = 27;
+            // 
+            // TelefonoMaskedTextBox
+            // 
+            this.TelefonoMaskedTextBox.Location = new System.Drawing.Point(137, 198);
+            this.TelefonoMaskedTextBox.Mask = "000-000-0000";
+            this.TelefonoMaskedTextBox.Name = "TelefonoMaskedTextBox";
+            this.TelefonoMaskedTextBox.Size = new System.Drawing.Size(363, 20);
+            this.TelefonoMaskedTextBox.TabIndex = 28;
+            // 
+            // CelularMaskedTextBox
+            // 
+            this.CelularMaskedTextBox.Location = new System.Drawing.Point(137, 224);
+            this.CelularMaskedTextBox.Mask = "000-000-0000";
+            this.CelularMaskedTextBox.Name = "CelularMaskedTextBox";
+            this.CelularMaskedTextBox.Size = new System.Drawing.Size(363, 20);
+            this.CelularMaskedTextBox.TabIndex = 29;
+            // 
+            // BalanceMaskedTextBox
+            // 
+            this.BalanceMaskedTextBox.Location = new System.Drawing.Point(136, 329);
+            this.BalanceMaskedTextBox.Name = "BalanceMaskedTextBox";
+            this.BalanceMaskedTextBox.ReadOnly = true;
+            this.BalanceMaskedTextBox.Size = new System.Drawing.Size(364, 20);
+            this.BalanceMaskedTextBox.TabIndex = 30;
+            // 
+            // MyErrorProvider
+            // 
+            this.MyErrorProvider.ContainerControl = this;
             // 
             // EliminarButton
             // 
@@ -254,49 +299,6 @@
             this.BuscarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BuscarButton.UseVisualStyleBackColor = true;
             this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
-            // 
-            // MatriculaMaskedTextBox
-            // 
-            this.MatriculaMaskedTextBox.Location = new System.Drawing.Point(137, 146);
-            this.MatriculaMaskedTextBox.Mask = "0000-0000";
-            this.MatriculaMaskedTextBox.Name = "MatriculaMaskedTextBox";
-            this.MatriculaMaskedTextBox.Size = new System.Drawing.Size(363, 20);
-            this.MatriculaMaskedTextBox.TabIndex = 26;
-            // 
-            // CedulaMasketTextBox
-            // 
-            this.CedulaMasketTextBox.Location = new System.Drawing.Point(137, 172);
-            this.CedulaMasketTextBox.Mask = "000-0000000-0";
-            this.CedulaMasketTextBox.Name = "CedulaMasketTextBox";
-            this.CedulaMasketTextBox.Size = new System.Drawing.Size(363, 20);
-            this.CedulaMasketTextBox.TabIndex = 27;
-            // 
-            // TelefonoMaskedTextBox
-            // 
-            this.TelefonoMaskedTextBox.Location = new System.Drawing.Point(137, 198);
-            this.TelefonoMaskedTextBox.Mask = "000-000-0000";
-            this.TelefonoMaskedTextBox.Name = "TelefonoMaskedTextBox";
-            this.TelefonoMaskedTextBox.Size = new System.Drawing.Size(363, 20);
-            this.TelefonoMaskedTextBox.TabIndex = 28;
-            // 
-            // CelularMaskedTextBox
-            // 
-            this.CelularMaskedTextBox.Location = new System.Drawing.Point(137, 224);
-            this.CelularMaskedTextBox.Mask = "000-000-0000";
-            this.CelularMaskedTextBox.Name = "CelularMaskedTextBox";
-            this.CelularMaskedTextBox.Size = new System.Drawing.Size(363, 20);
-            this.CelularMaskedTextBox.TabIndex = 29;
-            // 
-            // BalanceMaskedTextBox
-            // 
-            this.BalanceMaskedTextBox.Location = new System.Drawing.Point(136, 329);
-            this.BalanceMaskedTextBox.Name = "BalanceMaskedTextBox";
-            this.BalanceMaskedTextBox.Size = new System.Drawing.Size(364, 20);
-            this.BalanceMaskedTextBox.TabIndex = 30;
-            // 
-            // MyErrorProvider
-            // 
-            this.MyErrorProvider.ContainerControl = this;
             // 
             // RegistroEstudiantes
             // 
